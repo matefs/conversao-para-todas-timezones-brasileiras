@@ -24,6 +24,7 @@ for (var item of listaHorariosLegíveis) {
   novaLista.push(item.replaceAll('T', ' ').replaceAll('Z', '').slice(0, 19));
 }
 
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
  
 Horário utc com timezone zerada: ${inputDate}
