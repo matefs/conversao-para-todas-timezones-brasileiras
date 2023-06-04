@@ -11,6 +11,19 @@ const fernandoNoronhaTime = moment
   .tz('America/Noronha')
   .format();
 
+var listaHorariosLegíveis: any[] = [
+  acreTime,
+  amazonTime,
+  brasiliaTime,
+  fernandoNoronhaTime,
+];
+
+var novaLista: any[] = [];
+
+for (var item of listaHorariosLegíveis) {
+  novaLista.push(item.replaceAll('T', ' ').replaceAll('Z', '').slice(0, 19));
+}
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
  
 Horário utc com timezone zerada: ${inputDate}
@@ -28,4 +41,8 @@ Horário formatado de Manaus (-4) conforme o padrão UTC: ${amazonTime}
 Horário formatado do Acre (-5) conforme o padrão UTC: ${acreTime}
 <br><br>
 
+<hr>
+
+Horários legíveis (yyy/mm/dd): 
+${novaLista.map((item) => '<br>' + item )}
 `;
