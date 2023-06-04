@@ -35,7 +35,7 @@ Este repositório contém um código em JavaScript que permite a conversão de u
     npm run dev
     ```
     
-6. Acesse o aplicativo em seu navegador usando o seguinte URL: **`http://localhost:3000`**
+6. Acesse o aplicativo em seu navegador usando o seguinte URL: **`http://localhost:[PORTA INFORMADA PELO VITE NO CONSOLE]`**
 7. Veja a saída da conversão para todas as timezones brasileiras no console do seu navegador.
 
 ## **Contribuição**
